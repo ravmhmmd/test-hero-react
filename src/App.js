@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Model } from "./assets/Hero-scene";
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen">
+      <Canvas class="h-screen">
+        <OrbitControls />
+        <ambientLight intensity={0.5} />
+        <directionalLight position={(-2, 5, 2)} intensity={1} />
+        <Model />
+      </Canvas>
     </div>
   );
 }
