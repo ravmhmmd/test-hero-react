@@ -2,9 +2,10 @@ import "./App.css";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Model } from "./assets/Hero-scene";
+import { Model } from "./assets/Scene";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+// import Scene from "./components/Scene";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <ambientLight intensity={0.5} />
         <directionalLight position={(-2, 5, 2)} intensity={1} />
         <Model />
+        {/* <Scene /> */}
       </Canvas>
     </div>
   );

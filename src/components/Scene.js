@@ -18,9 +18,10 @@ export default function Scene() {
   const loader = new GLTFLoader();
 
   loader.load(
-    "../assets/shapespark-example-room.gltf",
+    "../assets/desk-setup.gltf",
     function (gltf) {
       scene.add(gltf.scene);
+      console.log("bla",gltf.scene);
     },
     undefined,
     function (error) {
